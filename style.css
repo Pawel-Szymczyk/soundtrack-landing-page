@@ -161,8 +161,6 @@ main {
 }
 
 .right-part div:first-child img {
-  /* grid-column-start: 1; */
-  /* grid-column-end: 4; */
   grid-column: 1 / 4;
   width: 100%;
   border-radius: 50% 50% 0 0;
@@ -274,7 +272,7 @@ html {
 }
 
 .testimonial {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: var(--rem-16);
 }
@@ -335,14 +333,14 @@ html {
 
 .user-info,
 .pill-container {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: var(--rem-10);
 }
 
 .user-info img {
   width: var(--rem-48) !important;
-  height: var(--rem-48);
+  height: var(--rem-42);
   border-radius: 50% !important;
 }
 
@@ -397,6 +395,7 @@ h4 {
 
 .video-section .left-part img {
   border-radius: 200px;
+  /* width: min(100%, 400px); */
 }
 
 .video-section .left-part > div:nth-child(2) {
@@ -406,8 +405,8 @@ h4 {
 }
 
 .video-section .left-part > div:nth-child(2) img {
-  width: 118.43px;
-  height: 118.43px;
+  /* width: 118.43px;
+  height: 118.43px; */
   width: 227px;
   height: 227px;
   border: 1px solid #3c636a;
@@ -416,7 +415,7 @@ h4 {
 
 .video-section .left-part .pill-container {
   box-shadow: 0 var(--rem-8) var(--rem-25) rgba(0, 0, 0, 0.1);
-  padding: 12px;
+  padding: var(--rem-12);
   border-radius: 100px;
   position: absolute;
   z-index: 99;
@@ -439,7 +438,7 @@ h4 {
   column-gap: var(--rem-53);
 }
 .case-studies-container {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: var(--rem-50);
 }
@@ -521,6 +520,68 @@ h4 {
   .email-form input {
     font-size: var(--rem-20);
   }
+
+  .chat-section .right-part .chat-bubble-purple-2 {
+    margin-top: var(--rem-20);
+  }
+
+  .video-section {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: var(--rem-30);
+  }
+
+  .video-section .left-part {
+    grid-column: 1 / 4;
+  }
+
+  .video-section .right-part {
+    grid-column: 4 / 7;
+  }
+
+  .video-section .left-part img {
+    width: 80%;
+  }
+  .video-section .left-part > div:nth-child(2) img {
+    width: 120px;
+    height: 120px;
+    padding: 25px;
+  }
+
+  .video-section .left-part > div:nth-child(2) {
+    left: 58%;
+  }
+
+  .video-section .left-part .pill-container {
+    left: -50px;
+    height: 12%;
+    padding: var(--rem-10);
+    bottom: 5%;
+    width: 170px;
+  }
+
+  .video-section .left-part .pill-container img {
+    padding: 10px;
+    width: 30%;
+  }
+
+  .case-studies-container {
+    gap: var(--rem-30);
+  }
+
+  .case-studies-container .case-study {
+    height: 100px;
+  }
+
+  .case-studies-container .case-study > div h3,
+  .case-studies-container .case-study > div span,
+  .case-studies-container .case-study > a {
+    font-size: var(--rem-28);
+    line-height: var(--rem-50);
+  }
+
+  .case-study-arrow > img {
+    width: 70% !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -545,9 +606,26 @@ h4 {
     display: block;
   }
 
-  .hero-section {
+  .hero-section,
+  .chat-section,
+  .video-section,
+  .case-study-section {
     margin-inline: var(--rem-40);
     gap: var(--rem-8);
+  }
+
+  .video-section {
+    gap: var(--rem-30);
+  }
+
+  .chat-section,
+  .video-section,
+  .case-study-section {
+    margin-top: var(--rem-40);
+  }
+
+  .chat-section {
+    column-gap: var(--rem-30);
   }
 
   .right-part div {
@@ -562,6 +640,7 @@ h4 {
   .content-container p {
     font-size: var(--rem-12);
     margin-top: var(--rem-12);
+    width: 100%;
   }
 
   .left-part,
@@ -587,5 +666,77 @@ h4 {
 
   .pattern {
     scale: 0.4;
+  }
+
+  .chat-section .left-part .content-container,
+  .video-section .right-part .content-container {
+    gap: var(--rem-30);
+  }
+
+  .chat-section .right-part {
+    gap: 0;
+  }
+
+  .chat-section .right-part .chat-bubble {
+    display: none;
+  }
+
+  .video-section {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .video-section .left-part {
+    grid-column: 1 / 4;
+  }
+
+  .video-section .right-part {
+    grid-column: 4 / 7;
+  }
+
+  .video-section .left-part > div:nth-child(2) img {
+    width: 80px;
+    height: 80px;
+    padding: 16px;
+  }
+
+  .video-section .left-part > div:nth-child(2) {
+    left: 58%;
+  }
+
+  .video-section .left-part .pill-container {
+    left: -10px;
+    height: 15%;
+    padding: 0;
+    bottom: 60px;
+    width: 150px;
+  }
+
+  .video-section .left-part .pill-container img {
+    padding: 10px;
+    width: 25%;
+  }
+
+  .case-study-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rem-30);
+  }
+
+  .case-studies-container {
+    gap: var(--rem-20);
+  }
+
+  .case-studies-container .case-study {
+    height: 64px;
+  }
+
+  .case-studies-container .case-study > div h3,
+  .case-studies-container .case-study > div span,
+  .case-studies-container .case-study > a {
+    font-size: var(--rem-20);
+    line-height: var(--rem-18);
+  }
+
+  .case-study-arrow > img {
+    width: 70% !important;
   }
 }
