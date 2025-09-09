@@ -572,7 +572,8 @@ h4 {
   }
 
   .case-studies-container .case-study {
-    height: 100px;
+    /* height: 100px; */
+    padding-bottom: var(--rem-30);
   }
 
   .case-studies-container .case-study > div h3,
@@ -730,7 +731,8 @@ h4 {
   }
 
   .case-studies-container .case-study {
-    height: 64px;
+    /* height: 64px; */
+    padding-bottom: 18px;
   }
 
   .case-studies-container .case-study > div h3,
