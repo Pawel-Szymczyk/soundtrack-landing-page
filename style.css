@@ -127,7 +127,8 @@ main {
   position: relative;
 }
 
-.content-container h1 {
+.content-container h1,
+.content-container h2 {
   font-size: var(--rem-60);
   line-height: var(--rem-70);
   font-weight: normal;
@@ -446,7 +447,8 @@ h4 {
   display: flex;
   flex-direction: row;
   border-bottom: 2px solid #d8d8d8;
-  height: 153px;
+  /* height: 153px; */
+  padding-bottom: 40px;
   justify-content: space-between;
 }
 
@@ -497,7 +499,8 @@ h4 {
     margin-inline-start: var(--rem-100);
   }
 
-  .content-container h1 {
+  .content-container h1,
+  .content-container h2 {
     font-size: var(--rem-50);
     line-height: var(--rem-50);
   }
@@ -632,7 +635,8 @@ h4 {
     display: block;
   }
 
-  .content-container h1 {
+  .content-container h1,
+  .content-container h2 {
     font-size: var(--rem-25);
     line-height: var(--rem-28);
   }
